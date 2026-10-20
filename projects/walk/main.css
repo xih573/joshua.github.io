@@ -1,14 +1,10 @@
-/* ==========================================
-   Diary Styling - Desktop & Mobile Friendly
-   ========================================== */
-
 :root {
-  --paper-bg: #f7f5f0;
-  --paper-texture: #faf8f5;
-  --ink-dark: #2c2b2a;
-  --ink-muted: #6e6b66;
+  --paper-bg: #f5f2eb;
+  --paper-texture: #fcfbfa;
+  --ink-dark: #2a2825;
+  --ink-muted: #66625d;
   --accent-color: #b85d38;
-  --border-color: #e3ded6;
+  --border-color: #ded9cf;
   --font-serif: "Caveat", cursive, serif;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -27,21 +23,18 @@ body {
   background-color: var(--paper-bg);
   color: var(--ink-dark);
   font-family: var(--font-sans);
-  line-height: 1.6;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================
-   Hero Section (Video + Header)
-   ========================================== */
 .hero {
   position: relative;
   width: 100%;
-  height: 650px; /* 用固定像素代替vh，确保大屏稳定 */
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 4rem 8%;
+  padding: 4rem 10%;
   overflow: hidden;
   color: #fff;
 }
@@ -65,20 +58,19 @@ body {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2) 20%,
-    rgba(0, 0, 0, 0.65) 100%
+    rgba(0, 0, 0, 0.15) 20%,
+    rgba(0, 0, 0, 0.6) 100%
   );
   z-index: 2;
 }
 
-.hero-text,
-.scroll-link {
+.hero-text {
   position: relative;
   z-index: 3;
 }
 
 .eyebrow {
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin: 0 0 0.5rem 0;
@@ -86,43 +78,20 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(3.5rem, 5vw, 6rem);
+  font-size: clamp(3rem, 5vw, 5.5rem);
   font-weight: 700;
   line-height: 1.1;
   margin: 0 0 1rem 0;
   font-family: var(--font-serif);
 }
 
-.hero-description {
-  font-size: 1.35rem;
-  margin: 0 0 2rem 0;
-  opacity: 0.9;
-  font-family: var(--font-serif);
-}
-
-.scroll-link {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.scroll-link:hover {
-  opacity: 1;
-}
-
-/* ==========================================
-   Main Diary Layout (更宽的桌面端日记本版式)
-   ========================================== */
+/* Diary Container - 你可以在这里根据需要自行微调 max-width */
 .diary {
-  max-width: 1100px; /* 拓宽主容器，告别两侧空旷感 */
+  max-width: 80%; 
   margin: 0 auto;
-  padding: 6rem 5%;
+  padding: 5rem 6%;
   background-color: var(--paper-texture);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
 }
 
 .diary-top {
@@ -133,82 +102,63 @@ body {
   letter-spacing: 0.1em;
   color: var(--ink-muted);
   border-bottom: 1px solid var(--border-color);
-  padding-bottom: 1.2rem;
-  margin-bottom: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
-section {
-  margin-bottom: 6rem;
-}
-
-.entry-label {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent-color);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+.diary-block {
+  margin-bottom: 4rem;
 }
 
 h2 {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
   font-weight: 500;
   color: var(--ink-dark);
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 p {
   font-size: 1.2rem;
   color: var(--ink-muted);
+  margin: 0 auto 1.2rem auto;
   margin-bottom: 1.2rem;
-  max-width: 650px; /* 限制单行文字长度，保持极佳的阅读体验 */
 }
 
-p em {
-  color: var(--ink-dark);
-  font-style: italic;
-}
-
-mark {
-  background-color: rgba(184, 93, 56, 0.12);
-  color: var(--ink-dark);
-  padding: 0.1em 0.3em;
-}
-
-/* ==========================================
-   Images & Polaroid / Print Framing
-   ========================================== */
 figure {
   margin: 3.5rem 0;
 }
 
 img {
   width: 100%;
-  height: auto;
+  max-height: 550px;
+  object-fit: cover;
   display: block;
+  border-radius: 2px;
 }
 
 .photo-print {
   background: #fff;
   padding: 14px 14px 40px 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-  transform: rotate(-1deg);
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transform: rotate(-0.5deg);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.photo-print:hover {
-  transform: rotate(0deg) scale(1.01);
+.photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 3.5rem 0;
 }
 
-.photo-print.second-photo {
-  transform: rotate(1.5deg);
-}
-
-.photo-print.second-photo:hover {
-  transform: rotate(0deg) scale(1.01);
+.photo-pair .photo-print {
+  max-width: 100%;
+  transform: rotate(0.5deg);
 }
 
 figcaption {
@@ -216,72 +166,27 @@ figcaption {
   font-size: 1.3rem;
   color: var(--ink-muted);
   text-align: center;
-  margin-top: 1.2rem;
+  margin-top: 1.1rem;
 }
 
 .wide-photo {
   margin: 4.5rem 0;
 }
 
-.wide-photo img {
-  border-radius: 3px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-}
-
-/* ==========================================
-   Rows, Lists, and Special Blocks
-   ========================================== */
-.diary-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-
-.route-list {
-  margin: 1.5rem 0;
-  padding-left: 1.2rem;
-  font-size: 1.2rem;
-  color: var(--ink-muted);
-}
-
-.route-list li {
-  margin-bottom: 0.6rem;
-}
-
-.margin-note {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  color: var(--accent-color);
-  margin-top: 1.8rem;
-}
-
-.photo-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 2.5rem;
-}
-
 .diary-pause {
   text-align: center;
-  padding: 5rem 0;
+  padding: 4.5rem 0;
   border-top: 1px dashed var(--border-color);
   border-bottom: 1px dashed var(--border-color);
-  margin: 6rem 0;
+  margin: 5rem 0;
 }
 
 .pull-quote {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 3vw, 3.2rem);
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
   color: var(--ink-dark);
   line-height: 1.3;
   margin: 0;
-}
-
-.ending {
-  text-align: left;
-  max-width: 700px;
 }
 
 .closing-line {
@@ -300,8 +205,8 @@ figcaption {
 }
 
 .diary-footer {
-  margin-top: 7rem;
-  padding-top: 2.5rem;
+  margin-top: 6rem;
+  padding-top: 2rem;
   border-top: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
@@ -320,28 +225,11 @@ figcaption {
   text-decoration: underline;
 }
 
-/* ==========================================
-   Responsive Design (Mobile Friendly Breakpoint)
-   ========================================== */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .diary {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.25rem;
   }
-
-  .diary-row,
   .photo-pair {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .diary-row.signs-row {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .diary-footer {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
   }
 }
