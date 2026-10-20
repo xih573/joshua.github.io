@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+
+  background-color: #f3efe6;
+  color: #292720;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* 视频和图片 */
+
+video,
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+video {
+  margin-bottom: 20px;
+}
+
+img {
+  margin: 24px 0;
+}
+
+/* 开头 */
+
+.intro {
+  margin-bottom: 60px;
+}
+
+.intro-caption {
+  color: #625e54;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* 文字层级 */
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 16px 0 24px;
+  font-size: 48px;
+}
+
+h2 {
+  margin: 28px 0 16px;
+  font-size: 30px;
+}
+
+h3 {
+  margin: 40px 0 16px;
+  font-size: 23px;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+/* 章节间距 */
+
+section {
+  margin-top: 64px;
+}
+
+/* 列表 */
+
+ol,
+ul {
+  padding-left: 28px;
+}
+
+li {
+  margin-bottom: 14px;
+}
+
+/* 强调文字 */
+
+mark {
+  background-color: #e5d59b;
+  color: inherit;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* 店内标语 */
+
+.sign p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* 分隔线 */
+
+hr {
+  margin: 60px 0;
+  border: none;
+  border-top: 1px solid #c9c1b3;
+}
+
+/* 页脚 */
+
+footer {
+  margin-top: 48px;
+}
+
+small {
+  color: #625e54;
+  font-size: 14px;
+}
+
+a {
+  color: #574b35;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: #2635a5;
+}
+
+/* 手机和较窄的窗口 */
+
+@media (max-width: 600px) {
+  body {
+    padding: 24px 20px 40px;
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  section {
+    margin-top: 44px;
+  }
+
+  .sign p {
+    font-size: 17px;
+  }
+}
