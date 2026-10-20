@@ -4,14 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Trip to BOOKOFF</title>
+  <title>An afternoon at BOOKOFF — Joshua's diary</title>
 
   <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
 
-  <!-- Full-screen opening video -->
   <header class="hero">
 
     <video
@@ -25,33 +24,40 @@
     ></video>
 
     <div class="hero-text">
-      <p>mentally i'm here.</p>
+      <p class="eyebrow">Joshua's walking diary / New York</p>
 
-      <h1>I step into the store.</h1>
+      <h1>An afternoon<br>at BOOKOFF.</h1>
 
-      <p>
-        Rows of full bookshelves.
-        Hundreds of used manga, games, and collectibles.
+      <p class="hero-description">
+        No shopping list. Just looking around.
       </p>
-
-      <a href="#walk">Explore the walk ↓</a>
     </div>
+
+    <a class="scroll-link" href="#diary">
+      Open the diary ↓
+    </a>
 
   </header>
 
-  <main id="walk">
+  <main id="diary" class="diary">
 
-    <!-- Collectibles -->
-    <section class="two-columns">
+    <div class="diary-top">
+      <span>A walk, remembered.</span>
+      <span>BOOKOFF / NYC</span>
+    </div>
 
-      <img
-        src="imgs/BOOKOFF 10.jpeg"
-        alt="Rows of boxed collectible figures lining the shelves at BOOKOFF"
-        loading="lazy"
-      >
+    <!-- Opening diary entry -->
+    <section class="opening">
 
-      <div class="section-text">
-        <h2>Some thoughts in my head</h2>
+      <p class="entry-label">01 / Stepping inside</p>
+
+      <h2>mentally i'm here.</h2>
+
+      <div class="opening-text">
+        <p>
+          I step into the store. Rows of full bookshelves.
+          I see hundreds of used manga, games, and CDs.
+        </p>
 
         <p>
           I came here today with no specific shopping list.
@@ -59,220 +65,213 @@
           with zero pressure to buy anything—just enjoying
           the quiet time passing by.
         </p>
+      </div>
+
+    </section>
+
+    <!-- Wide photograph -->
+    <figure class="wide-photo">
+      <img
+        src="imgs/BOOKOFF 10.jpeg"
+        alt="Rows of boxed collectible figures on shelves at BOOKOFF"
+        loading="lazy"
+      >
+
+      <figcaption>
+        Fig. 01 — So much to look at. Nothing I needed to buy.
+      </figcaption>
+    </figure>
+
+    <!-- Route -->
+    <section class="diary-row route">
+
+      <figure class="photo-print">
+        <img
+          src="imgs/BOOKOFF 8.jpeg"
+          alt="A narrow book aisle with wooden flooring"
+          loading="lazy"
+        >
+
+        <figcaption>
+          Fig. 02 — Taking the long way through the shelves.
+        </figcaption>
+      </figure>
+
+      <div class="entry-text">
+        <p class="entry-label">02 / Wandering</p>
+
+        <h2>No particular<br>direction.</h2>
 
         <p>
-          Looking at the boxes, I kept recognizing characters
-          and remembering things I used to like.
+          I think about the vintage games and anime figures
+          I used to admire.
+        </p>
+
+        <ol class="route-list">
+          <li>Walk into the quiet book aisles.</li>
+          <li>Turn toward the manga and figure displays.</li>
+          <li>Keep going past the DVDs and games.</li>
+          <li>Stop whenever something catches my eye.</li>
+        </ol>
+
+        <p class="margin-note">
+          No rush. No checklist.
         </p>
       </div>
 
     </section>
 
-    <!-- Walking route -->
-    <section class="two-columns">
+    <!-- Details -->
+    <section class="details">
 
-      <img
-        src="imgs/BOOKOFF 8.jpeg"
-        alt="A narrow aisle with wooden flooring between shelves of books"
-        loading="lazy"
-      >
+      <div class="section-heading">
+        <p class="entry-label">03 / Small discoveries</p>
 
-      <div class="section-text">
-        <h2>My route</h2>
+        <h2>Little things I stopped for.</h2>
 
-        <ol>
-          <li>
-            Pause at the collectibles and think about the
-            games and anime figures I used to admire.
-          </li>
+        <p>
+          The shelf of Gunpla boxes looked overwhelming at first.
+          Looking closer, I noticed
+          <mark>detailed designs, nostalgic series, and classic artwork</mark>.
+        </p>
+      </div>
 
-          <li>
-            Walk into the book aisles.
-          </li>
+      <div class="photo-pair">
 
-          <li>
-            Slow down to look at the manga and model kits.
-          </li>
+        <figure class="photo-print">
+          <img
+            src="imgs/BOOKOFF 4.jpg"
+            alt="Model kit boxes with colorful illustrations stacked on shelves"
+            loading="lazy"
+          >
 
-          <li>
-            Keep going toward the shelves of DVDs and games.
-          </li>
+          <figcaption>
+            Fig. 03 — A whole world inside each box.
+          </figcaption>
+        </figure>
 
-          <li>
-            Wander without deciding what to buy.
-          </li>
-        </ol>
+        <figure class="photo-print second-photo">
+          <img
+            src="imgs/BOOKOFF 15.jpeg"
+            alt="Video game controllers arranged inside a glass display cabinet"
+            loading="lazy"
+          >
+
+          <figcaption>
+            Fig. 04 — A pause by the game controllers.
+          </figcaption>
+        </figure>
+
       </div>
 
     </section>
 
-    <!-- Observations -->
-    <section class="observations">
+    <!-- A pause in the diary -->
+    <div class="diary-pause">
+      <p class="entry-label">A thought between the aisles</p>
 
-      <div class="observations-intro">
-        <h2>Things I noticed</h2>
+      <p class="pull-quote">
+        Just being here<br>
+        feels therapeutic.
+      </p>
+    </div>
 
-        <ul>
-          <li>
-            Colorful figure boxes packed tightly along the shelves.
-          </li>
+    <!-- Quiet shelves -->
+    <section class="quiet-section">
 
-          <li>
-            Game controllers arranged behind glass.
-          </li>
-
-          <li>
-            Long rows of book spines, interrupted by bright signs.
-          </li>
-        </ul>
-      </div>
-
-      <div class="two-columns">
-
-        <img
-          src="imgs/BOOKOFF 4.jpg"
-          alt="Shelves stacked with illustrated model kit boxes"
-          loading="lazy"
-        >
-
-        <div class="section-text">
-          <h3>The model kit section</h3>
-
-          <p>
-            The shelf of Gunpla boxes looked overwhelming at first.
-            Looking closer, I noticed
-            <mark>
-              detailed designs, nostalgic series, and classic artwork
-            </mark>.
-          </p>
-
-          <p>
-            Each box had so much to look at.
-            I spent more time looking at the packaging
-            than thinking about buying anything.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="two-columns quiet-aisles">
-
+      <figure class="wide-photo">
         <img
           src="imgs/BOOKOFF 14.jpeg"
-          alt="Long rows of books and media neatly arranged on shelves"
+          alt="Rows of books and media neatly filling the store shelves"
           loading="lazy"
         >
 
-        <div class="section-text">
-          <h3>The quiet aisles</h3>
+        <figcaption>
+          Fig. 05 — More shelves. A little more time.
+        </figcaption>
+      </figure>
 
-          <p>
-            Running my fingers along the book spines
-            without picking one up to buy.
-          </p>
+      <div class="quiet-text">
+        <p class="entry-label">04 / Slowing down</p>
 
-          <p>
-            <strong>Just being here feels therapeutic.</strong>
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Games -->
-    <section class="two-columns">
-
-      <img
-        src="imgs/BOOKOFF 15.jpeg"
-        alt="Video game controllers displayed inside a glass cabinet"
-        loading="lazy"
-      >
-
-      <div class="section-text">
-        <h2>A pause by the games</h2>
+        <h2>The quiet aisles.</h2>
 
         <p>
-          I stopped at the glass cabinet to look at the controllers.
-          Seeing familiar shapes made me think about the games
-          I used to play.
+          Running my fingers along the book spines
+          without picking one up to buy.
         </p>
 
         <p>
-          It was another reason to slow down
-          and stay a little longer.
+          For a little while, I was happy to keep looking.
         </p>
       </div>
 
     </section>
 
-    <!-- Store signage -->
-    <section class="two-columns">
+    <!-- Store notices -->
+    <section class="diary-row signs-row">
 
-      <img
-        src="imgs/BOOKOFF 12.jpeg"
-        alt="A yellow information board covered with store notices and promotional flyers"
-        loading="lazy"
-      >
+      <div class="entry-text">
+        <p class="entry-label">05 / On the wall</p>
 
-      <div class="section-text">
-        <h2>A wall of information</h2>
+        <h2>One more thing<br>to look at.</h2>
 
         <p>
-          Away from the shelves, a yellow board was filled
-          with flyers and store notices.
+          A yellow board covered with flyers and store notices.
+          Big headlines, small print, and different colors,
+          all sharing the same space.
         </p>
 
-        <p>
-          Large headlines, small print, and bright colors
-          competed for my attention. I found myself looking
-          at the arrangement before reading the words.
+        <p class="margin-note">
+          Even the walls had something to say.
         </p>
       </div>
 
-    </section>
+      <figure class="photo-print">
+        <img
+          src="imgs/BOOKOFF 12.jpeg"
+          alt="A yellow information board filled with promotional flyers and notices"
+          loading="lazy"
+        >
 
-    <hr>
-
-    <!-- Ending -->
-    <section class="two-columns ending">
-
-      <img
-        src="imgs/BOOKOFF 1.jpg"
-        alt="Rows of books filling the shelves at BOOKOFF"
-        loading="lazy"
-      >
-
-      <div class="section-text">
-        <h2>After the walk</h2>
-
-        <p>
-          I ended up buying nothing at all today.
-          But spending an hour just wandering around,
-          revisiting old memories, and wasting some time
-          was surprisingly comforting and wonderful.
-        </p>
-
-        <p>
-          I came in without a shopping list.
-          I left with empty hands and a peaceful mind.
-        </p>
-      </div>
+        <figcaption>
+          Fig. 06 — A little collection of messages.
+        </figcaption>
+      </figure>
 
     </section>
+
+    <!-- Last entry -->
+    <section class="ending">
+
+      <p class="entry-label">06 / Heading home</p>
+
+      <h2>Leaving with nothing.</h2>
+
+      <p>
+        I ended up buying nothing at all today.
+        But spending an hour just wandering around,
+        revisiting old memories, and wasting some time
+        was surprisingly comforting and wonderful.
+      </p>
+
+      <p class="closing-line">
+        Empty hands, peaceful mind.
+      </p>
+
+      <p class="signature">— Joshua</p>
+
+    </section>
+
+    <footer class="diary-footer">
+      <p>
+        Notes written from memory after returning home.
+      </p>
+
+      <a href="../../index.html">← Back to all projects</a>
+    </footer>
 
   </main>
-
-  <footer>
-    <p>
-      <small>
-        Notes written from memory after returning home
-        with empty hands and a peaceful mind.
-      </small>
-    </p>
-
-    <a href="../../index.html">← Back to all projects</a>
-  </footer>
 
 </body>
 </html>

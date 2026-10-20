@@ -1,52 +1,81 @@
+/* Basic settings */
+
 * {
   box-sizing: border-box;
 }
 
-/* 页面基础设置 */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  padding: 0;
-
-  background-color: #f3efe6;
-  color: #292720;
-
+  background-color: #f5f1e8;
+  color: #34352f;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 20px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-/* 第一屏：铺满窗口 */
+h1,
+h2,
+p,
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 6px;
+}
+
+a:hover {
+  color: #87543d;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+
+p + p {
+  margin-top: 22px;
+}
+
+
+/* Full-screen video */
 
 .hero {
   position: relative;
-  width: 100%;
   height: 100vh;
+  min-height: 650px;
   overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: #292720;
+  background-color: #292b26;
+  color: #fffaf0;
 }
-
-/* 模糊视频背景 */
 
 .hero-video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
 
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-  filter: blur(6px) brightness(0.5);
-  transform: scale(1.05);
-}
 
-/* 视频上方的文字 */
+  filter: blur(5px) brightness(0.45);
+  transform: scale(1.06);
+}
 
 .hero-text {
   position: relative;
@@ -54,174 +83,302 @@ body {
 
   width: 90%;
   max-width: 1200px;
-  padding: 40px;
-
-  color: white;
   text-align: center;
 }
 
-.hero-text h1 {
-  margin: 20px 0 28px;
+.eyebrow {
+  margin-bottom: 32px;
 
-  font-size: 96px;
-  font-weight: normal;
-  line-height: 1.1;
-}
-
-.hero-text p {
-  max-width: 680px;
-  margin: 0 auto 24px;
-
-  font-size: 24px;
-}
-
-.hero-text a {
-  display: inline-block;
-  margin-top: 28px;
-
-  color: white;
   font-family: "Courier New", Courier, monospace;
-  font-size: 17px;
-  text-underline-offset: 6px;
+  font-size: 15px;
+  letter-spacing: 0.12em;
 }
 
-.hero-text a:hover {
-  color: #e5d59b;
+.hero h1 {
+  font-size: clamp(80px, 8vw, 132px);
+  font-weight: normal;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
 }
 
-/* 正文宽度与留白 */
+.hero-description {
+  margin-top: 32px;
+  font-size: 24px;
+  font-style: italic;
+}
 
-main {
+.scroll-link {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  z-index: 1;
+
+  transform: translateX(-50%);
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.scroll-link:hover {
+  color: #e6ce9e;
+}
+
+
+/* Diary page */
+
+.diary {
+  width: 88%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 100px 60px;
 }
 
-section {
-  margin-bottom: 120px;
+.diary-top {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 32px 0 20px;
+  border-bottom: 1px solid #cfc8b9;
+
+  color: #706d62;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
 }
 
-/* 左图右文 */
+.entry-label {
+  margin: 0 0 22px;
 
-.two-columns {
+  color: #85634f;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 28px;
+
+  font-size: 54px;
+  font-weight: normal;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+
+/* Opening entry */
+
+.opening {
+  max-width: 880px;
+  margin: 100px auto 70px;
+}
+
+.opening h2 {
+  margin-bottom: 36px;
+  font-size: 76px;
+}
+
+.opening-text {
+  max-width: 720px;
+  margin-left: 80px;
+}
+
+
+/* Photographs and captions */
+
+.wide-photo {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 14px;
+
+  color: #706d62;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.photo-print {
+  align-self: start;
+
+  padding: 16px 16px 20px;
+  background-color: #fffdf7;
+
+  border: 1px solid #e4dfd3;
+  box-shadow: 0 8px 20px rgba(57, 48, 32, 0.08);
+}
+
+
+/* Photograph beside a diary entry */
+
+.diary-row {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
   align-items: center;
+
+  margin: 140px 0;
 }
 
-.two-columns > img,
-.section-text {
+.diary-row > * {
   min-width: 0;
 }
 
-/* 正文图片 */
-
-main img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
+.route > .photo-print {
+  width: 88%;
+  margin-left: 20px;
+  transform: rotate(-2deg);
 }
 
-/* 文字层级 */
-
-h2 {
-  margin: 0 0 24px;
-
-  font-size: 42px;
-  font-weight: normal;
-  line-height: 1.2;
+.entry-text {
+  max-width: 520px;
 }
 
-h3 {
-  margin: 0 0 24px;
-
-  font-size: 34px;
-  font-weight: normal;
-  line-height: 1.2;
+.route-list {
+  margin: 28px 0 0;
+  padding-left: 24px;
 }
 
-p {
-  margin: 0 0 24px;
+.route-list li {
+  margin-bottom: 14px;
+  padding-left: 8px;
 }
 
-/* 列表 */
+.margin-note {
+  margin-top: 36px;
 
-ol,
-ul {
-  margin: 0;
-  padding-left: 28px;
+  color: #85634f;
+  font-size: 24px;
+  font-style: italic;
 }
 
-li {
-  margin-bottom: 16px;
+
+/* Small discoveries */
+
+.details {
+  margin: 150px 0 0;
 }
 
-/* 观察部分 */
-
-.observations-intro {
+.section-heading {
   max-width: 760px;
-  margin-bottom: 64px;
+  margin-bottom: 55px;
 }
-
-.quiet-aisles {
-  margin-top: 90px;
-}
-
-/* 强调文字 */
 
 mark {
-  background-color: #e5d59b;
+  padding: 0 3px;
+  background-color: #e8ddb4;
   color: inherit;
 }
 
-/* 店内标语 */
+.photo-pair {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 65px;
+  align-items: start;
+}
 
-.sign {
-  padding: 60px 0;
+.photo-pair > * {
+  min-width: 0;
+}
+
+.photo-pair > .photo-print:first-child {
+  transform: rotate(-1deg);
+}
+
+.second-photo {
+  margin-top: 95px;
+  transform: rotate(2deg);
+}
+
+
+/* A quiet pause */
+
+.diary-pause {
+  margin: 150px 0;
+  padding: 70px 0;
   text-align: center;
 }
 
-.sign p {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 30px;
-  line-height: 1.8;
+.pull-quote {
+  margin-top: 28px;
+
+  color: #59604a;
+  font-size: 76px;
+  font-style: italic;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
 }
 
-/* 分隔线 */
 
-hr {
-  margin: 0 0 100px;
-  border: none;
-  border-top: 1px solid #c9c1b3;
+/* Quiet aisles */
+
+.quiet-section {
+  margin-bottom: 140px;
 }
 
-/* 结尾 */
+.quiet-text {
+  max-width: 650px;
+  margin: 55px 8% 0 auto;
+}
+
+
+/* Notice board */
+
+.signs-row {
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+}
+
+.signs-row > .photo-print {
+  transform: rotate(1.5deg);
+}
+
+
+/* Final diary entry */
 
 .ending {
-  margin-bottom: 0;
+  max-width: 790px;
+  margin: 160px auto 110px;
+  padding-top: 70px;
+
+  border-top: 1px solid #cfc8b9;
 }
 
-/* 页脚 */
-
-footer {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 60px 60px;
+.ending h2 {
+  font-size: 64px;
 }
 
-small {
-  color: #625e54;
-  font-size: 15px;
+.closing-line {
+  margin-top: 36px;
+
+  color: #59604a;
+  font-size: 30px;
+  font-style: italic;
 }
 
-footer a {
-  color: #574b35;
-  font-size: 17px;
-  text-underline-offset: 5px;
+.signature {
+  margin-top: 28px;
+  font-size: 26px;
+  font-style: italic;
 }
 
-footer a:hover {
-  color: #2635a5;
+
+/* Footer */
+
+.diary-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 30px;
+
+  padding: 25px 0 45px;
+  border-top: 1px solid #cfc8b9;
+
+  color: #706d62;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+}
+
+.diary-footer a {
+  flex-shrink: 0;
 }
