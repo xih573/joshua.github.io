@@ -15,8 +15,6 @@ body {
   margin: 0 auto;
 }
 
-/* 标题和课程介绍 */
-
 .heading {
   margin-bottom: 70px;
   text-align: center;
@@ -36,8 +34,6 @@ h1 {
   font-size: 16px;
   line-height: 1.6;
 }
-
-/* 项目链接 */
 
 .entry {
   border-top: 1px solid white;
@@ -60,8 +56,6 @@ h1 {
   color: #2635a5;
 }
 
-/* 反思页面入口 */
-
 footer {
   margin-top: 40px;
   text-align: center;
@@ -72,8 +66,6 @@ footer a {
   font-size: 16px;
   text-underline-offset: 5px;
 }
-
-/* 窗口较窄时调整大小 */
 
 @media (max-width: 600px) {
   body {
