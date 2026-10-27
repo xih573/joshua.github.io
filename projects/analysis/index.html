@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Pudding — HTML Structure Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <header>
+      Core 1 Interaction: Lab — <em>HTML Structure Analysis</em>
+      <h1>The Pudding</h1>
+      <p>Joshua Xi / Website structure study</p>
+    </header>
+
+    <nav id="table-of-contents" aria-label="Page contents">
+      <ul>
+        <li><a href="#screenshot">Screenshot ↓</a></li>
+        <li><a href="#analysis">Analysis ↓</a></li>
+        <li><a href="#questions">Questions ↓</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="screenshot">
+        <h2>Screenshot</h2>
+        <p>The desktop homepage of The Pudding.</p>
+        <img src="imgs/screenshot.png" alt="The Pudding homepage with a centered logo, navigation, and three columns of story cards.">
+      </section>
+
+      <section id="analysis">
+        <h2>Analysis</h2>
+        <p><a href="https://pudding.cool/" target="_blank" rel="noopener noreferrer">Link to the original website ↗</a></p>
+        <div class="grid-col-2">
+          <div>
+            <h3>Simplified HTML structure</h3>
+            <p>This outline summarizes the visible sections. It is not an exact copy of the website's source code.</p>
+            <pre id="analysis--simplified-html"><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;div class="description"&gt;...&lt;/div&gt;
+    &lt;a class="logo"&gt;...&lt;/a&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main id="content"&gt;
+    &lt;div class="toolbar"&gt;
+      &lt;input type="search"&gt;
+      &lt;div class="filters"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="stories"&gt;
+      &lt;article class="story"&gt;
+        &lt;div class="metadata"&gt;
+          &lt;span&gt;Story number&lt;/span&gt;
+          &lt;time&gt;Date&lt;/time&gt;
+        &lt;/div&gt;
+        &lt;a href="story-page.html"&gt;
+          &lt;img src="cover.jpg" alt="..."&gt;
+          &lt;h2&gt;Story title&lt;/h2&gt;
+        &lt;/a&gt;
+        &lt;p&gt;Short description&lt;/p&gt;
+      &lt;/article&gt;
+      &lt;!-- More story cards --&gt;
+      &lt;aside class="newsletter"&gt;...&lt;/aside&gt;
+    &lt;/div&gt;
+
+    &lt;section class="extras"&gt;
+      &lt;div&gt;Staff recommendation&lt;/div&gt;
+      &lt;div&gt;Merchandise&lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;div&gt;Support&lt;/div&gt;
+    &lt;div&gt;Newsletter&lt;/div&gt;
+    &lt;div&gt;About and social links&lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+          </div>
+
+          <div id="analysis--text">
+            <h3>Main containers</h3>
+            <p>The page has a header, a main content area, and a footer. In the desktop view, the header places a short introduction on the left, the logo in the center, and navigation links on the right. The content stays within a centered area, leaving white space on both sides.</p>
+            <p>Below the header, a toolbar groups the search field and category filters. The story cards sit in a separate container called <code>stories</code>, which is visible in the developer tools. Grouping the cards in one container makes it easier to control their spacing and columns.</p>
+
+            <h3>Repeated components</h3>
+            <p>Each story card follows a similar order: a number and date, a square cover image, a title, and a short description. The images and text change, but the repeated arrangement makes the page easy to scan.</p>
+            <p>In the audio-filtered view I examined, a newsletter block takes the middle space between two story cards near the bottom. Below the stories are a staff recommendation and a merchandise section. The footer returns to a three-column arrangement.</p>
+
+            <h3>Layout and grid</h3>
+            <p>The desktop screenshots show three equal columns with consistent gaps. The square images align across each row. There is more space between rows than between columns, which helps separate the groups of stories.</p>
+            <p>At the narrower 610-pixel view, the cards appear in two columns. The introduction moves below the logo and navigation, and the category controls become a dropdown. The layout changes with the available width.</p>
+            <p>I could recreate the card layout using CSS Grid with <code>grid-template-columns: repeat(3, 1fr)</code>, then use a media query to change it to two columns. Flexbox would work for the number and date, using <code>justify-content: space-between</code>. These are possible ways to rebuild the layout, rather than confirmed copies of the original CSS.</p>
+
+            <h3>Typography and visual hierarchy</h3>
+            <p>The story titles use a heavy, rounded serif style. The descriptions use a simpler sans-serif style in gray, while the numbers, dates, and filter labels have a compact monospaced appearance. These differences separate the titles from the supporting information.</p>
+            <p>The colorful covers attract attention first. The bold titles come next, followed by the smaller descriptions. The white background keeps the page from feeling too crowded, even though there are many stories.</p>
+
+            <h3>What I would keep in my recreation</h3>
+            <p>I would keep the centered page width, three-column desktop layout, square covers, and repeated card structure. I could replace the images and writing with my own content while keeping the original layout as a reference.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="questions">
+        <h2>Questions</h2>
+        <p>Questions to investigate while inspecting and rebuilding the page:</p>
+        <ul>
+          <li>At what screen width does the original story grid change from three columns to two?</li>
+          <li>How does the newsletter block stay between two story cards? Is it part of the same grid?</li>
+          <li>Some class names include <code>svelte-</code> followed by letters and numbers. Are these names generated automatically, and how do they connect to the CSS?</li>
+          <li>How does the row of category filters change into a dropdown on a smaller screen?</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Joshua Xi · Core 1 Interaction: Lab</p>
+      <p>Reference: <a href="https://pudding.cool/">The Pudding</a></p>
+    </footer>
+  </body>
+</html>
