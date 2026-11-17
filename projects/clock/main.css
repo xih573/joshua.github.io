@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #b6dce8;
+}
+
+.sundial {
+  position: relative;
+  width: 80vw;
+}
+
+.base {
+  display: block;
+  width: 100%;
+}
+
+.shadow {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  height: auto;
+  width: 29.2%;
+  transform: translateY(-50%) rotate(30deg);
+  transform-origin: 3.3% center;
+
+  opacity: 0.35;
+  filter: blur(3px);
+}
+
+.pointer {
+  position: absolute;
+  left: 50%;
+  bottom: 54%;
+
+  width: 2.25%;
+  transform: translateX(-50%);
+}
