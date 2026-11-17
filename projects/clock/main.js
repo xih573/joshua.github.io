@@ -34,7 +34,7 @@ if (time < 12) {
   length = 18 + (time - 12) * 1;
 }
 
-shadow.style.width = length * 0.9 + "%";
+shadow.style.width = length * 0.8 + "%";
 let angle = hours * 15 + minutes * 0.25;
 
   shadow.style.transform =
