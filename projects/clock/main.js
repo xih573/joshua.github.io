@@ -16,13 +16,9 @@ if (hours < 6) {
   body.style.background =
   "linear-gradient(135deg, #ffffff, #8ed5e7, #079bd3)";
   shadow.style.opacity = "0.35";
-} else if (hours < 19) {
-  body.style.background =
-    "linear-gradient(135iebt, #aca5e8, #d5afd0, #efbb9b)";
-  shadow.style.opacity = "0";
 } else {
   body.style.background =
-    "linear-gradient(135deg, #111a30, #39445f, #81788f)";
+  "linear-gradient(135deg, #aca5e8, #d5afd0, #efbb9b)";
   shadow.style.opacity = "0";
 }
 let time = hours + minutes / 60;
@@ -34,7 +30,7 @@ if (time < 12) {
   length = 18 + (time - 12) * 1;
 }
 
-shadow.style.width = length * 0.8 + "%";
+shadow.style.width = length + "%";
 let angle = hours * 15 + minutes * 0.25;
 
   shadow.style.transform =
