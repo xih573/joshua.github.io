@@ -25,9 +25,9 @@ let time = hours + minutes / 60;
 let length;
 
 if (time < 12) {
-  length = 25 + (12 - time) * 2;
+  length = 18 + (12 - time) * 1;
 } else {
-  length = 25 + (time - 12) * 2;
+  length = 18 + (time - 12) * 1;
 }
 
 shadow.style.width = length + "%";
