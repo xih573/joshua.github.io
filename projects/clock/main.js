@@ -16,11 +16,11 @@ if (hours < 6) {
   body.style.background =
   "linear-gradient(135deg, #ffffff, #8ed5e7, #079bd3)";
   shadow.style.opacity = "0.35";
-} else {
+} else if (hours < 19) {
   body.style.background =
-  "linear-gradient(135deg, #aca5e8, #d5afd0, #efbb9b)";
+    "linear-gradient(135iebt, #aca5e8, #d5afd0, #efbb9b)";
   shadow.style.opacity = "0";
-}
+
 let time = hours + minutes / 60;
 let length;
 
